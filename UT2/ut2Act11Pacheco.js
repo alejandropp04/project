@@ -6,9 +6,9 @@ function iniciarPartida(){
 
     while (turnoActual <= turnosMaximos) {
         if(esTurnoBlancas(turnoActual)) {
-            console.log(`Turno ${turnoActual} -> Mueven las ♟ negras`);
-        }else{
             console.log(`Turno ${turnoActual} -> Mueven las ♙ blancas`);
+        }else{
+            console.log(`Turno ${turnoActual} -> Mueven las ♟ negras`);
         }
 
         movimientosValidos += turnoActual % 2 === 0 ? 1 : 0;
@@ -24,7 +24,7 @@ function iniciarPartida(){
 }
 
 function esTurnoBlancas(turno){
-    return turno % 2 !== 0;
+    return turno % 2 !== 0; // Las blancas juegan en turnos impares
 }
 
 iniciarPartida();
